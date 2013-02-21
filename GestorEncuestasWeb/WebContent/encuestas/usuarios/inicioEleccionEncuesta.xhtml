@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition 
+	template="/plantillas/administracion.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"> 
+         <ui:define name="header">
+         	<ui:include src="/extractos/encabezadoNavegacionGeneral.xhtml">
+         	</ui:include>
+         </ui:define>
+         <ui:define name="body">
+	<div align="center">
+		<fieldset>
+			<legend>Banco de Encuestas</legend>
+			<h:form>
+				<h:selectOneMenu valueChangeListener="#{encuestaSesion.selectEncuesta}" >
+				Elija una encuesta:	<f:selectItems value="#{bancoEncuesta.arrayEncuestasItems}" />
+				</h:selectOneMenu>
+				<h:commandButton value="Rellenar Encuesta"  action="#{encuestaSesion.iniciarEncuestaUsuario}" />
+			</h:form>
+		</fieldset>
+		</div>
+		
+         </ui:define>
+   </ui:composition>

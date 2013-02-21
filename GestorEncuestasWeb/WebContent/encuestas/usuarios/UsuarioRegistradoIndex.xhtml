@@ -1,0 +1,11 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+	#{userBean.loginName}<br/>
+	#{userBean.user.nombre}<br/>
+	#{userBean.user.apellido1}<br/>
+	<h:selectOneMenu id="menu" value="#{tareasAdministracion}">
+		<f:selectItems value="#{tareasAdministracion.adminTasks}"></f:selectItems>
+	</h:selectOneMenu><br></br>
+	<a href="/GestorEncuestasWeb/encuestas/usuarios/inicioEleccionEncuesta.jsf">Elija una encuesta</a>
+</html>
